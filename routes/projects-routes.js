@@ -57,11 +57,10 @@ router.post('/', (req, res) => {
     })
 })
 
-router.post('/:id/tasks', (req, res) => {
+router.post('/tasks', (req, res) => {
     const newTask = req.body
-    const projectId = req.params.id
 
-    Projects.addTasks(projectId, newTask)
+    Projects.addTasks(newTask)
     .then(task => {
         res.status(200).json(task)
     })

@@ -48,19 +48,15 @@ module.exports = {
     //     values ('chair')
     },
 
-    addTasks(id, taskBody) {
+    addTasks(taskBody) {
         //must provide id of existing project
         return db('tasks')
         .insert(taskBody)
         .join('projects', 'projects.id', 'tasks.projects_id')
-        .where({ 'projects.id':id })
 
-        // This didn't work in sqlite
-    // insert into Tasks (task_description)
-    //     values ('use wood, glue, saw')
-    // join Projects
-    // on projects.id = tasks.projects_id
-    //     where tasks.projects_id = projects.id;
+        
+        // insert into Tasks (task_description, projects_id)
+        // values ('use wood saw', 2)
     }
 
 
