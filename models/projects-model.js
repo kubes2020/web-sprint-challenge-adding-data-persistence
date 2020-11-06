@@ -22,8 +22,8 @@ module.exports = {
         return db('')
     },
 
-    addTasks() {
-        
+    addTasks(id) {
+        //must provide id of existing project
         return db('')
     }
 
