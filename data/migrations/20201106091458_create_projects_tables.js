@@ -23,7 +23,7 @@ exports.up = function(knex) {
 
 .createTable('resources', tbl => {
     tbl.increments()
-    tbl.string('recource_name', 128).notNullable().unique()
+    tbl.string('resource_name', 128).notNullable().unique()
     tbl.text('resource_description')
 })
 
