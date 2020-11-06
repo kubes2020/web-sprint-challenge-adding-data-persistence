@@ -40,13 +40,27 @@ module.exports = {
     //     values ('glue', 'sticky')
     },
 
-    addProjects() {
-        return db('')
+    addProjects(nameBody) {
+        return db('projects')
+        .insert(nameBody)
+
+    // insert into Projects (project_name)
+    //     values ('chair')
     },
 
-    addTasks(id) {
+    addTasks(id, taskBody) {
         //must provide id of existing project
-        return db('')
+        return db('tasks')
+        .insert(taskBody)
+        .join('projects', 'projects.id', 'tasks.projects_id')
+        .where({ 'projects.id':id })
+
+        // This didn't work in sqlite
+    // insert into Tasks (task_description)
+    //     values ('use wood, glue, saw')
+    // join Projects
+    // on projects.id = tasks.projects_id
+    //     where tasks.projects_id = projects.id;
     }
 
 
