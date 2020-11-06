@@ -31,8 +31,13 @@ module.exports = {
     // from Resources 
     },
 
-    addResoures() {
-        return db('')
+    addResources(resourceBody) {
+        return db('resources')
+        .insert(resourceBody)
+
+    // insert into 
+    //     resources (resource_name, resource_description)
+    //     values ('glue', 'sticky')
     },
 
     addProjects() {
