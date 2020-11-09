@@ -48,7 +48,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain the difference between `Relational Databases` and `SQL`.
 
-- A Ralational Database is like a spreadsheet...rows and columns, where each row represents a record with a primary key and each column represents an attribute directly related to that primary key. Only one piece of data is allowed per attibute. SQL is the language that allows us to manage the database with commands: create table, alter table, update, delete, select, rollback etc.
+- A Ralational Database is like a spreadsheet...rows and columns, where each row represents a record with a primary key and each column represents an attribute directly related to that primary key. Only one piece of data is allowed per attibute. SQL Structured Query Language, allows us to interact with a database, RDBMS. We can run queries, updates, deletes etc. using SQL.
 
 2. Why do tables need a `primary key`?
 
